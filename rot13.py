@@ -8,6 +8,7 @@ template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir),
                                autoescape=True)
 
+
 def rot13(alphabet, letter):
     num = alphabet.find(letter)
     num = num+13
@@ -16,7 +17,6 @@ def rot13(alphabet, letter):
     newltr = alphabet[num]
     return newltr
 
-specialchars = ["<",">"]
 
 def converttext(text):
     newtext = ""
